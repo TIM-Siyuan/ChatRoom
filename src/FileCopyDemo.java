@@ -92,6 +92,7 @@ public class FileCopyDemo {
                 return "bufferedStreamCopy";
             }
         };
+        //非直接缓冲区
         FileCopyRunner nioBufferCopy = new FileCopyRunner() {
             @Override
             public void copyFile(File source, File target) {
@@ -129,6 +130,7 @@ public class FileCopyDemo {
                 return "nioBufferCopy";
             }
         };
+        //通道之间的数据传输(直接缓冲区的模式)
         FileCopyRunner nioTransferCopy = new FileCopyRunner() {
             @Override
             public void copyFile(File source, File target) {
